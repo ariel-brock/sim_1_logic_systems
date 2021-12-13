@@ -18,8 +18,9 @@ OR2 #(
 		.Tpdlh(2),
 		.Tpdhl(6)
 	) or2_inst(
-	.Z(temp),
+	.Z(or_d0_sel),
 	.A(d0),
+	.B(sel)
 	.B(sel)
 );
 
@@ -35,7 +36,7 @@ XOR2 #(
 XOR2 #(
 		.Tpdlh(8),
 		.Tpdhl(2)
-	) xor2_inst(
+	) xor2_inst1(
 	.Z(xor_second_output),
 	.A(sel),
 	.B(d1)
@@ -44,7 +45,7 @@ XOR2 #(
 OR2 #(
 		.Tpdlh(2),
 		.Tpdhl(6)
-	) or2_inst(
+	) or2_inst1(
 	.Z(or_sel_d1),
 	.A(sel),
 	.B(d1)
@@ -53,7 +54,7 @@ OR2 #(
 XOR2 #(
 		.Tpdlh(8),
 		.Tpdhl(2)
-	) xor2_inst(
+	) xor2_inst2(
 	.Z(xor_third_output),
 	.A(xor_second_output),
 	.B(or_sel_d1)
@@ -62,7 +63,7 @@ XOR2 #(
 OR2 #(
 		.Tpdlh(2),
 		.Tpdhl(6)
-	) or2_inst(
+	) or2_inst2(
 	.Z(z),
 	.A(xor_first_output),
 	.B(xor_third_output)
