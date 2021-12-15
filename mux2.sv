@@ -21,7 +21,6 @@ OR2 #(
 	.Z(or_d0_sel),
 	.A(d0),
 	.B(sel)
-	.B(sel)
 );
 
 XOR2 #(
