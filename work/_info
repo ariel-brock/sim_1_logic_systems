@@ -1,0 +1,182 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Documents/simulation 1/sim_1_logic_systems
+vmux2
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1639410095
+!i10b 1
+!s100 C;9g304moN1>UQ:fBI?`91
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IjY6]?PMc0c_@Y8E0Bn;ZS3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1639410057
+8mux2.sv
+Fmux2.sv
+!i122 13
+L0 2 73
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1639410094.000000
+!s107 mux2.sv|
+!s90 -reportprogress|300|mux2.sv|
+!i113 1
+Z5 tCvgOpt 0
+vmux2_test
+R1
+!s110 1639410099
+!i10b 1
+!s100 HR=UGP?8^PMhkG<]FkVLd1
+R2
+IJaV]]jOVmzg5:;09n;XT03
+R3
+S1
+R0
+w1639410002
+8mus2_tb.sv
+Fmus2_tb.sv
+!i122 14
+L0 2 58
+R4
+r1
+!s85 0
+31
+!s108 1639410099.000000
+!s107 mus2_tb.sv|
+!s90 -reportprogress|300|mus2_tb.sv|
+!i113 1
+R5
+vmux4
+R1
+!s110 1639412542
+!i10b 1
+!s100 5Qjmclgjn0_CEJSCoBVhZ2
+R2
+Ih8:0DnHUY:HbhRiE<HdNI1
+R3
+S1
+R0
+w1639412539
+8mux4.sv
+Fmux4.sv
+!i122 15
+L0 2 37
+R4
+r1
+!s85 0
+31
+!s108 1639412542.000000
+!s107 mux4.sv|
+!s90 -reportprogress|300|mux4.sv|
+!i113 1
+R5
+vmux4_test
+R1
+!s110 1639413586
+!i10b 1
+!s100 6Ic<SAZge77QQFkPnM=Ch3
+R2
+IPiISSPU5@:Cm0?lli]o]72
+R3
+S1
+R0
+w1639413583
+8mux4_test.sv
+Fmux4_test.sv
+!i122 18
+L0 2 48
+R4
+r1
+!s85 0
+31
+!s108 1639413586.000000
+!s107 mux4_test.sv|
+!s90 -reportprogress|300|mux4_test.sv|
+!i113 1
+R5
+vNOT
+R1
+Z6 !s110 1639409069
+!i10b 1
+!s100 K^gGD`WG[XMMPZ=Z=jl^43
+R2
+I4EYUhFo9l2T96kYnYNVIV3
+R3
+S1
+R0
+w1619958549
+8./libcells/NOT.sv
+F./libcells/NOT.sv
+!i122 3
+L0 1 11
+R4
+r1
+!s85 0
+31
+Z7 !s108 1639409069.000000
+Z8 !s107 ./libcells/XOR2.sv|./libcells/OR2.sv|./libcells/NOT.sv|
+Z9 !s90 -reportprogress|300|./libcells/NOT.sv|./libcells/OR2.sv|./libcells/XOR2.sv|
+!i113 1
+R5
+n@n@o@t
+vOR2
+R1
+R6
+!i10b 1
+!s100 TKP6Xe513KabBIJNZ^OmL2
+R2
+IJJ4lHf2kM77=<;SK691bB2
+R3
+S1
+R0
+w1564820704
+8./libcells/OR2.sv
+F./libcells/OR2.sv
+!i122 3
+Z10 L0 1 12
+R4
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R5
+n@o@r2
+vXOR2
+R1
+R6
+!i10b 1
+!s100 WOl6GJfJ^zXX:H7>8beNN0
+R2
+IH:<8Fmi@mYjWjZ^5P[CmW0
+R3
+S1
+R0
+w1580392564
+8./libcells/XOR2.sv
+F./libcells/XOR2.sv
+!i122 3
+R10
+R4
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R5
+n@x@o@r2

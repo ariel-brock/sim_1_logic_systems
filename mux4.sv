@@ -10,8 +10,29 @@ module mux4 (
 
 // Put your code here
 // ------------------
+logic mux2_first_output;
+logic mux2_second_output;
 
+mux2 mux2_inst1(
+	.d0(d0),
+	.d1(d1),
+	.sel(sel[0]),
+	.z(mux2_first_output)
+);
 
+mux2 mux2_inst2(
+	.d0(d2),
+	.d1(d3),
+	.sel(sel[0]),
+	.z(mux2_second_output)
+);
+
+mux2 mux2_inst3(
+	.d0(mux2_first_output),
+	.d1(mux2_second_output),
+	.sel(sel[1]),
+	.z(z)
+);
 // End of your code
 
 endmodule
