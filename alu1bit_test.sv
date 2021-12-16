@@ -1,5 +1,5 @@
 // Full Adder/Subtractor test bench template
-module fas_test;
+module alu1bit_test;
 
 // Put your code here
 // ------------------
@@ -12,13 +12,13 @@ module fas_test;
     // Gate inputs
     logic a;
     logic b;
-    logic a_ns;
+    logic [1:0] op;
     logic cin;
 	
-	fas fas_inst(
+	alu1bit alu1bit_inst(
 	.a(a),
 	.b(b),
-	.a_ns(a_ns),
+	.op(op),
 	.cin(cin),
 	.cout(cout),
 	.s(s)
@@ -27,15 +27,63 @@ module fas_test;
     // The testbench: try different input combinations at different points
     // of time - change values every 10 time units.
     initial begin
-		a_ns = 1'b0;
+		op[0] = 1'b1;
+		op[1] = 1'b1;
 		a = 1'b0;
-		b = 1'b1;
+		b = 1'b0;
 		cin = 1'b0;
 		
 		#100
 		a = 1'b1;
 		
+		#100
+		a = 1'b1;
+		
+		#100
+		cin = 1'b1;
+		
+		#100
+		op[0] = 1'b1;
+		a = 1'b0;
+		b = 1'b0;
+		cin = 1'b0;
+		
+		#100
+		a = 1'b1;
+		
+		#100
+		a = 1'b0;
+		b = 1'b1;
+		
+		#100
+		a = 1'b1;
+		
+		#100
+		a = 1'b0;
+		b = 1'b0;
+		cin = 1'b1;
+		
+		#100
+		op[0] = 1'b0;
+		op[1] = 1'b0;
+		a = 1'b0;
+		b = 1'b0;
+		cin = 1'b0;
+		
+		#100
+		a = 1'b1;
+		
+		#100
+		op[0] = 1'b1;
+		a = 1'b0;
+		b = 1'b0;
+		cin = 1'b0;
+		
+		#100
+		b = 1'b1;
+		
 		#100;
+		
 	end
 	
 

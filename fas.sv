@@ -12,19 +12,19 @@ module fas (
 // ------------------
 logic a_not, anot_xor_ans,b_and_cin, b_and_cin_not, anot_xor_ans_not,and_first_half, not_first_half; 
 logic b_not, cin_not, bnot_and_cinnot, not_second_half;
-logic a_xor_b;
+logic b_xor_cin;
 
 NOT #(
-		.Tpdlh(1),
+		.Tpdlh(8),
 		.Tpdhl(8)
 	) not_inst0(
 	.Z(a_not),
 	.A(a)
-)
+);
 
 XOR2 #(
 		.Tpdlh(8),
-		.Tpdhl(2)
+		.Tpdhl(8)
 	) xor2_inst0(
 	.Z(anot_xor_ans),
 	.A(a_not),
@@ -32,15 +32,15 @@ XOR2 #(
 );
 
 NOT #(
-		.Tpdlh(1),
+		.Tpdlh(8),
 		.Tpdhl(8)
 	) not_inst1(
 	.Z(anot_xor_ans_not),
 	.A(anot_xor_ans)
-)
+);
 
 OR2 #(
-		.Tpdlh(2),
+		.Tpdlh(6),
 		.Tpdhl(6)
 	) or2_inst0(
 	.Z(b_and_cin),
@@ -49,15 +49,15 @@ OR2 #(
 );
 
 NOT #(
-		.Tpdlh(1),
+		.Tpdlh(8),
 		.Tpdhl(8)
 	) not_inst2(
 	.Z(b_and_cin_not),
 	.A(b_and_cin)
-)
+);
 
 OR2 #(
-		.Tpdlh(2),
+		.Tpdlh(6),
 		.Tpdhl(6)
 	) or2_inst1(
 	.Z(and_first_half),
@@ -66,31 +66,31 @@ OR2 #(
 );
 
 NOT #(
-		.Tpdlh(1),
+		.Tpdlh(8),
 		.Tpdhl(8)
 	) not_inst3(
 	.Z(not_first_half),
 	.A(and_first_half)
-)
+);
 
 NOT #(
-		.Tpdlh(1),
+		.Tpdlh(8),
 		.Tpdhl(8)
 	) not_inst4(
 	.Z(b_not),
 	.A(b)
-)
+);
 
 NOT #(
-		.Tpdlh(1),
+		.Tpdlh(8),
 		.Tpdhl(8)
 	) not_inst5(
 	.Z(cin_not),
 	.A(cin)
-)
+);
 
 OR2 #(
-		.Tpdlh(2),
+		.Tpdlh(6),
 		.Tpdhl(6)
 	) or2_inst2(
 	.Z(bnot_and_cinnot),
@@ -99,15 +99,15 @@ OR2 #(
 );
 
 NOT #(
-		.Tpdlh(1),
+		.Tpdlh(8),
 		.Tpdhl(8)
 	) not_inst6(
 	.Z(not_second_half),
 	.A(bnot_and_cinnot)
-)
+);
 
 OR2 #(
-		.Tpdlh(2),
+		.Tpdlh(6),
 		.Tpdhl(6)
 	) or2_inst3(
 	.Z(cout),
@@ -117,20 +117,20 @@ OR2 #(
 
 XOR2 #(
 		.Tpdlh(8),
-		.Tpdhl(2)
+		.Tpdhl(8)
 	) xor2_inst1(
-	.Z(a_xor_b),
-	.A(a),
-	.B(b)
+	.Z(b_xor_cin),
+	.A(b),
+	.B(cin)
 );
 
 XOR2 #(
 		.Tpdlh(8),
-		.Tpdhl(2)
+		.Tpdhl(8)
 	) xor2_inst2(
 	.Z(s),
-	.A(a_xor_b),
-	.B(cin)
+	.A(b_xor_cin),
+	.B(a)
 );
 
 
