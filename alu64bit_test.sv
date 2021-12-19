@@ -19,7 +19,6 @@ alu64bit alu64bit_inst(
 	.s(s),
 	.cout(cout)
 );
-	int i;
 	initial begin
 	a = {64{1'b1}};
 	b = {64{1'b0}};
@@ -27,7 +26,8 @@ alu64bit alu64bit_inst(
 	cin = 1'b0;
 	op[0] = 1'b0;
 	op[1] = 1'b1;
-		#3000;
+	
+	#3000;
 	b[0] = 1'b1;
 	
 	#3000;
